@@ -1,4 +1,4 @@
-package pl.ingbank.spk.acq;
+package main.java;
 
 public class Day04 {
 
