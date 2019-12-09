@@ -1,7 +1,6 @@
 package main.java;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +12,7 @@ public class Day05_2 {
 	private static List<Long> inputList;
 	private static final Long INPUT_VALUE = 5L;
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		inputList = parseIntListToLongList(input);
 		calculate(inputList);
 	}
