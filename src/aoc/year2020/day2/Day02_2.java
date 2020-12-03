@@ -1,4 +1,4 @@
-package main.java.year2020;
+package aoc.year2020.day2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,13 +6,14 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static aoc.year2020.AocUtils.getInput;
+
 public class Day02_2 {
 
-	private final static String INPUT_PATH = "src/main/resources/2020Day02Input.txt";
 	private final static String PASSWORD_POLICY_REGEX = "^(\\d+)-(\\d+)\\s(.):\\s(.+)$";
 
 	public static void main(String[] args) throws FileNotFoundException {
-		File file = new File(INPUT_PATH);
+		File file = getInput("day2");
 		int numberOfValidPasswords = 0;
 		int numberOfInvalidPasswords = 0;
 		Scanner scanner = new Scanner(file);

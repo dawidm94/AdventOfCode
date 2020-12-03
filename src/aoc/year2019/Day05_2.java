@@ -1,4 +1,4 @@
-package main.java.year2019;
+package aoc.year2019;
 
 import java.util.Arrays;
 import java.util.List;

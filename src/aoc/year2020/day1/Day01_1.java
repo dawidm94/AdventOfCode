@@ -1,4 +1,4 @@
-package main.java.year2020;
+package aoc.year2020.day1;
 
 public class Day01_1 {
 
