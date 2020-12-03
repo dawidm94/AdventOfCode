@@ -6,14 +6,14 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static aoc.year2020.AocUtils.getInput;
+import static aoc.year2020.AocUtils.getInputFile;
 
 public class Day02_1 {
 
 	private final static String PASSWORD_POLICY_REGEX = "^(\\d+)-(\\d+)\\s(.):\\s(.+)$";
 
 	public static void main(String[] args) throws FileNotFoundException {
-		File file = getInput("day2");
+		File file = getInputFile("day2");
 		int numberOfValidPasswords = 0;
 		int numberOfInvalidPasswords = 0;
 		Scanner scanner = new Scanner(file);
