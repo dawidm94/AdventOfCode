@@ -24,11 +24,11 @@ public class Day03_2 {
 
 			if (multipliedTreesCounter == 0) {
 				multipliedTreesCounter = treeCounter;
+
 			} else {
 				multipliedTreesCounter *= treeCounter;
 			}
 		}
-
 		System.out.printf("Multiplied trees -> %d", multipliedTreesCounter);
 	}
 
