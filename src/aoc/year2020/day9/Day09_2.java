@@ -20,7 +20,7 @@ public class Day09_2 {
 			boolean numberIsSummed = checkIfNumberIsSummed(fileLines, summedNumber, i);
 			if (!numberIsSummed) {
 				List<Long> numberList = findContiguousSumNumber(summedNumber, longFileLines);
-				if (numberList != null) {
+				if (numberList != null && !numberList.isEmpty()) {
 					Optional<Long> minNumber = numberList.stream().min(Long::compareTo);
 					Optional<Long> maxNumber = numberList.stream().max(Long::compareTo);
 					System.out.println("Found list: " + numberList.toString());
