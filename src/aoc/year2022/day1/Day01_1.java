@@ -12,8 +12,6 @@ public class Day01_1 {
 
 	public static void main(String[] args) throws IOException {
 		List<String> lines = AocUtils.getAllStringLines(YEAR2022, DAY_1);
-		lines.add("");
-
 		System.out.println("Result is: " + getMostCarriedElfCalories(lines));
 	}
 
