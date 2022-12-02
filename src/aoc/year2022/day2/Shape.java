@@ -8,6 +8,9 @@ public enum Shape {
     private static final int WIN_POINTS = 6;
     private static final int DRAW_POINTS = 3;
     private static final int LOSE_POINTS = 0;
+    private static final char WIN = 'Z';
+    private static final char DRAW = 'Y';
+    private static final char LOSE = 'X';
 
     final int points;
 
@@ -19,12 +22,29 @@ public enum Shape {
         return points;
     }
 
-    public static Shape of(char sign) {
-        return switch (sign) {
+    public static Shape of(char shapeSign) {
+        return switch (shapeSign) {
             case 'A','X' -> ROCK;
             case 'B','Y' -> PAPER;
             case 'C','Z' -> SCISSOR;
-            default -> throw new IllegalStateException("Unexpected value: " + sign);
+            default -> throw new IllegalStateException("Unexpected value: " + shapeSign);
+        };
+    }
+
+    public Shape determineOpponent(char roundResultSign) {
+        return switch (roundResultSign) {
+            case LOSE -> switch (this) {
+                case ROCK -> SCISSOR;
+                case PAPER -> ROCK;
+                case SCISSOR -> PAPER;
+            };
+            case DRAW -> this;
+            case WIN -> switch (this) {
+                case ROCK -> PAPER;
+                case PAPER -> SCISSOR;
+                case SCISSOR -> ROCK;
+            };
+            default -> throw new IllegalStateException("Unexpected value: " + roundResultSign);
         };
     }
 
