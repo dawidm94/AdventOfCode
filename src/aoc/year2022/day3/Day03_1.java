@@ -5,7 +5,6 @@ import aoc.AocUtils;
 import java.io.IOException;
 import java.util.List;
 
-import static aoc.model.AocDay.DAY_1;
 import static aoc.model.AocDay.DAY_3;
 import static aoc.model.AocYear.YEAR2022;
 
